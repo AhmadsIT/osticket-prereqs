@@ -28,13 +28,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 ![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/f37cd686-2ffb-4e52-bece-7a6bdb82cde5)
 
-Install IIS with CGI and Common HTTP Features:
+Installing IIS and PHP Manager:
 - Install IIS with CGI and Common HTTP Features
-
-Install PHP Manager for IIS:
 - Download and install PHP Manager for IIS
-
-Install Rewrite Module for IIS:
 - Download and install the Rewrite Module.
 
 <br />
