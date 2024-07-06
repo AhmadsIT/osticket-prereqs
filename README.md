@@ -84,6 +84,6 @@ Finish osTicket Setup:
 ![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/f891dcb1-33b4-42dd-ab6e-4a7a222b0837)
 
 <p>
-osTicket is successfully installed and running!
+osTicket is successfully installed and running.
 </p>
 <br />
