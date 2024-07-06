@@ -50,7 +50,7 @@ Configure IIS:
 ![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/d5cd42ff-550f-47c4-868c-dc81fc70aa15)
 
 Install MySQL:
-- Download and install MySQL 5.5.62 with Standard Configuration and set password to "Password1".
+- Download and install MySQL with Standard Configuration and set password to "Password1".
 - Open IIS as Admin.
 - Register PHP.
 
