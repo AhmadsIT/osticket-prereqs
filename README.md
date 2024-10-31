@@ -25,65 +25,75 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation</h2>
 
-![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/f37cd686-2ffb-4e52-bece-7a6bdb82cde5)
+<b>1. Create Azure Virtual Machine</b>
+- Create a Windows 10 VM named "osticket-vm" with 4 vCPUs.
+  
+![image](https://github.com/user-attachments/assets/4317a02c-c921-4b77-b22c-485842d91cf9)
 
-Installing IIS and PHP Manager:
-- Install IIS with CGI and Common HTTP Features
-- Download and install PHP Manager for IIS
-- Download and install the Rewrite Module.
 
-<br />
+<b>2. Download and Prepare osTicket Installation Files</b>
+- Download <b>osTicket-Installation-Files.zip</b> and unzip it to the desktop.
+  
+![image](https://github.com/user-attachments/assets/2ce1a07d-a912-4596-b359-f91f77332799)
 
-![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/f434b612-5d4b-4a25-879e-fd2f0b64f9b3)
+<b>3. Install and Enable IIS</b>
+- Enable IIS with CGI: Go to Control Panel > Programs > Turn Windows features on or off > World Wide Web Services > Application Development Features > CGI.
+  
+![image](https://github.com/user-attachments/assets/8f7bf924-b03c-405a-a069-d40a3a5f1e4d)
 
-Set up PHP:
-- Create directory C:\PHP.
-- Download PHP 7.3.8 and extract the contents to C:\PHP.
-- Install VC_redist.x86 (C++ Redistributable).
+<b>4. Install PHP and Rewrite Module</b>
+- Install PHP Manager for IIS and Rewrite Module from the osTicket files.
 
-Configure IIS:
-- Open IIS as Admin.
-- Register PHP.
-- Reload IIS.
-<br />
+![image](https://github.com/user-attachments/assets/fa696552-5728-47d5-82d0-d30a52ff547e) ![image](https://github.com/user-attachments/assets/80e80c79-9ccc-4b49-8519-d021126c214a)
 
-![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/d5cd42ff-550f-47c4-868c-dc81fc70aa15)
 
-Install MySQL:
-- Download and install MySQL with Standard Configuration and set password to "Password1".
-- Open IIS as Admin.
-- Register PHP.
+<b>5. Set Up PHP</b>
+- Create a directory C:\PHP.
+- Unzip PHP 7.3.8 into C:\PHP.
 
-<br />
+![image](https://github.com/user-attachments/assets/df09fb65-bd78-43b9-a136-eb45a2d95f45)
 
-![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/1f3da7f6-7a24-4963-b0c6-5a234119784d)
+<b>6. Install MySQL</b>
+- Install MySQL 5.5.62 with the username "root" and password "root".
+  
+![image](https://github.com/user-attachments/assets/54b7d818-19a4-42a0-a336-f4f825e699d4)
 
-Install osTicket:
-- Download osTicket.
-- Extract "upload" folder to c:\inetpub\wwwroot and rename it to "osTicket".
-- Reload IIS.
+<b>7. Register PHP with IIS</b>
+- Register PHP using PHP Manager in IIS.
+  
+![image](https://github.com/user-attachments/assets/fd90c2cd-b41a-4c52-a2fd-938d814aa8e1)
 
-Configure PHP Extensions:
-- Open PHP Manager in IIS.
-- Enable php_imap.dll, php_intl.dll, and php_opcache.dll.
-- Refresh the osTicket site in your browser.
+<b>8. Install osTicket</b>
+- Unzip osTicket-v1.15.8.zip and copy the "upload" folder to C:\inetpub\wwwroot and rename it to "osTicket".
+  
+![image](https://github.com/user-attachments/assets/0ff3dde2-28c1-421a-a92a-9982d3f5552c)
 
-Setup osTicket:
-- Rename ost-config.php from ost-sampleconfig.php and configure permissions.
-- Complete osTicket setup in the browser with Helpdesk name and Default email.
+<b>9. Configure PHP Extensions</b>
+- Enable required PHP extensions: php_imap.dll, php_intl.dll, php_opcache.dll.
+  
+![image](https://github.com/user-attachments/assets/679d45a3-dba7-4140-9c78-7eff90532f50)
 
-Configure MySQL Database:
-- Install HeidiSQL.
-- Create a new session with root/Password1.
-- Connect and create a database named "osTicket".
+<b>10. Set Permissions for ost-config.php</b>
+- Rename ost-sampleconfig.php to ost-config.php and set permissions to remove inheritance and allow "Everyone" full control.
+  
+![image](https://github.com/user-attachments/assets/88b83894-197c-49d3-a37e-0e9d157429cc)
 
-Finish osTicket Setup:
-- Continue osTicket setup in the browser with MySQL Database, Username (root), Password (Password1), and click "Install Now!"
-<br />
+<b>11. Setup Database (HeidiSQL)</b>
+- Open Heidi SQL
+- Create a new session, root/root
+- Connect to the session
+- Create a database called “osTicket”
+  
+![image](https://github.com/user-attachments/assets/1309989c-5c04-4dce-8940-d1cb536742a9)
 
-![image](https://github.com/ahmadspain/osticket-prereqs/assets/158358030/f891dcb1-33b4-42dd-ab6e-4a7a222b0837)
+<b>12. Complete osTicket Setup in Browser</b>
+- Access the installation via http://localhost/osTicket and follow prompts to configure database settings:
+   - MySQL Database: osTicket
+   - MySQL Username: root
+   - MySQL Password: root
+     
+![image](https://github.com/user-attachments/assets/9f91903a-b30e-4ebc-895f-3fe2ef2d7b31)
 
-<p>
-osTicket is successfully installed and running.
-</p>
-<br />
+<b>13. osTicket is successfully installed and running.</b>
+
+![image](https://github.com/user-attachments/assets/9beb26c2-aa4d-412b-9cce-f5bbbfe545cc)
