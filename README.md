@@ -87,7 +87,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 ![image](https://github.com/user-attachments/assets/1309989c-5c04-4dce-8940-d1cb536742a9)
 
 <b>12. Complete osTicket Setup in Browser</b>
-- Access the installation via http://localhost/osTicket and follow prompts to configure database settings:
+- Access the installation via "http://localhost/osTicket" and follow prompts to configure database settings:
    - MySQL Database: osTicket
    - MySQL Username: root
    - MySQL Password: root
